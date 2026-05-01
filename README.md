@@ -14,7 +14,7 @@ This pipeline extracts the secondary structure context and calculates the signed
 * **`scripts/context_stride.py`**: Parses the STRIDE secondary structure output to find valid X-R-X motifs specifically inside alpha helices and extracts their sequence context.
 * **`scripts/calc_angles.py`**: Reads the 3D coordinate data from the raw PDB files, calculates the center of mass for the relevant sidechains, and computes the spatial angles.
 * **`scripts/plot_angles.py`**: Takes the computed angles spreadsheet and generates a categorized Kernel Density Estimate (KDE) plot based on the steric bulk of neighboring residues.
-* **`results/`**: The output directory where the final compiled dataset (`angles.tsv`), the list of successfully processed PDBs (`valid_pdbs.txt`), and the visualization are saved.
+* **`result/`**: The output directory where the final compiled dataset (`angles.tsv`), the list of successfully processed PDBs (`valid_pdbs.txt`), and the visualization are saved.
 
 ## Instructions to Reproduce
 
