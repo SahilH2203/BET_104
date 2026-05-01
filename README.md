@@ -25,7 +25,7 @@ This pipeline extracts the secondary structure context and calculates the signed
 
 ```bash
 snakemake --cores all --keep-going
-
+```
 ## Output
 
 The pipeline will automatically generate the `valid_runs.txt` file containing the PDB names of all successfully processed files, and the final Kernel Density Estimate plot.
