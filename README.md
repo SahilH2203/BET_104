@@ -15,11 +15,10 @@ This pipeline extracts the secondary structure context and calculates the signed
 4. Execute the following single-line command:
 
 \`\`\`bash
-snakemake --cores all
+snakemake --cores all --keep-going
 \`\`\`
 
 ## Output
 
 The pipeline will automatically generate the `valid_runs.txt` file containing the PDB names of all successfully processed files, and the final Kernel Density Estimate plot shown below:
-<img width="3000" height="1800" alt="ss_profile_HHH_for_arg" src="https://github.com/user-attachments/assets/c7dfc1bd-05dc-453a-bf7a-dafc737f4f90" />
 
