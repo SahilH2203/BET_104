@@ -8,7 +8,7 @@ AA = config.get("target_aa", "ARG")
 STRIDE = config.get("stride_path", "stride")
 PLOT_NAME = config.get("plot_name", "ss_profile_HHH_for_arg_with_valid_runs.png")
 ANGLE_FILE = config.get("angle_file", "computed_angles.tsv")
-VALID_RUNS = config.get("valid_runs", "valid_runs.txt")
+VALID_RUNS = config.get("valid_runs", "valid_pdbs.txt")
 
 # Find all PDBs dynamically
 PDBS = [
