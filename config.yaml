@@ -1,0 +1,5 @@
+target_aa: "ARG"
+plot_name: "ss_profile_HHH_for_arg_with_valid_runs.png"
+angle_file: "computed_angles.tsv"
+valid_runs: "valid_runs.txt"
+stride_path: "stride"
