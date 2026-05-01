@@ -23,9 +23,8 @@ This pipeline extracts the secondary structure context and calculates the signed
 3. Ensure you have the required dependencies installed (`snakemake`, `stride`, `biopython`, `numpy`, `pandas`, `seaborn`, `matplotlib`).
 4. Execute the following single-line command:
 
-\`\`\`bash
+```bash
 snakemake --cores all --keep-going
-\`\`\`
 
 ## Output
 
