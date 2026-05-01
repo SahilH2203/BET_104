@@ -18,8 +18,8 @@ PDBS = [
 
 rule all:
     input:
-        f"final/{PLOT_NAME}",
-        f"final/{VALID_RUNS}"
+        f"result/{PLOT_NAME}",
+        f"result/{VALID_RUNS}"
 
 rule unzip_pdb:
     input:
@@ -45,25 +45,25 @@ rule extract_context:
     output:
         tsv = "contexts/context_for_{aa}_in_{pdb}.tsv"
     shell:
-        "python scripts/context_stride.py {input.ss} {output.tsv} {wildcards.aa}"
+        "python Script/context_stride.py {input.ss} {output.tsv} {wildcards.aa}"
 
 rule calculate_angles:
     input:
         tsvs = expand("contexts/context_for_{aa}_in_{pdb}.tsv", aa=[AA], pdb=PDBS)
     output:
-        angles = f"final/{ANGLE_FILE}",
-        valid_pdbs = f"final/{VALID_RUNS}"
+        angles = f"result/{ANGLE_FILE}",
+        valid_pdbs = f"result/{VALID_RUNS}"
     params:
         aa = AA,
         contexts_dir = "contexts",
         pdbs_dir = "pdbs"
     shell:
-        "python scripts/calc_angles.py {params.contexts_dir} {output.angles} {params.aa} {params.pdbs_dir}"
+        "python Script/calc_angles.py {params.contexts_dir} {output.angles} {params.aa} {params.pdbs_dir}"
 
 rule plot_angles:
     input:
-        angles = f"final/{ANGLE_FILE}"
+        angles = f"result/{ANGLE_FILE}"
     output:
-        plot = f"final/{PLOT_NAME}"
+        plot = f"result/{PLOT_NAME}"
     shell:
-        "python scripts/plot_angles.py {input.angles} {output.plot}"
+        "python Script/plot_angles.py {input.angles} {output.plot}"
