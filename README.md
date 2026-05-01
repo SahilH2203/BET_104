@@ -1,7 +1,11 @@
-<img width="3000" height="1800" alt="ss_profile_HHH_for_arg" src="https://github.com/user-attachments/assets/cfb6b646-1ad8-4646-904e-e9585d4d7dd7" />
+
 # Target Amino Acid Neighborhood Effect Pipeline
 
 This pipeline extracts the secondary structure context and calculates the signed 3D angle between the $C_\alpha$ -> Centroid vectors of adjacent residues surrounding an Arginine (X-R-X) within an Alpha Helix (HHH).
+
+# Plot
+
+<img width="3000" height="1800" alt="ss_profile_HHH_for_arg" src="https://github.com/user-attachments/assets/cfb6b646-1ad8-4646-904e-e9585d4d7dd7" />
 
 ## Instructions to Reproduce
 
